@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className={!nav ? 'p-5 mt-[71px]  sm:mt-[103px] fixed top-[-200%] w-full ease-in-out duration-500 lg:hidden z-[1] bg-[#ffff] font-medium' : 'p-5 mt-[71px]  sm:mt-[103px] fixed top-[0] w-full ease-in-out duration-500 lg:hidden z-[1] bg-[#ffff] font-medium border-b-[1px] shadow'}>
+        <ul className={!nav ? 'p-5 mt-[71px] fixed top-[-200%] w-full ease-in-out duration-500 lg:hidden z-[1] bg-[#ffff] font-medium' : 'p-5 mt-[71px]  fixed top-[0] w-full ease-in-out duration-500 lg:hidden z-[1] bg-[#ffff] font-medium border-b-[1px] shadow'}>
             <li className='hover:text-[#7D5683] border-b-2 border-zinc-300 w-full py-4 cursor-pointer'><Link onClick={handleClose} to="/" smooth={true} duration={500}>Home</Link></li>
             <li className='hover:text-[#7D5683] border-b-2 border-zinc-300 w-full py-4 cursor-pointer'><Link onClick={handleClose} to="aboutus" smooth={true} offset={-60} duration={500}>About Us</Link></li>
             <li className='hover:text-[#7D5683] border-b-2 border-zinc-300 w-full py-4 cursor-pointer'><Link onClick={handleClose} to="program" smooth={true}  duration={500}>Services</Link></li>
@@ -64,7 +64,7 @@ const Navbar = () => {
             <li className='hover:text-[#7D5683] border-b-2 border-zinc-300 w-full py-4 cursor-pointer'><Link onClick={handleClose} to="pricing" smooth={true} offset={-60} duration={500}>Insights</Link></li>
 
           <div className='flex flex-col my-5'>
-              <button className='px-8 py-3 font-semibold bg-[#7D5683] rounded-[20px] text-white hover:bg-[#7D5683]'>Contact Us</button>
+              <button className='px-8 py-3 font-semibold bg-[#402158] rounded-[20px] text-white hover:bg-[#7D5683]'>Contact Us</button>
           </div>
         </ul>
 
