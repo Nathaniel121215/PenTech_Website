@@ -3,6 +3,9 @@ import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Article from './components/Article';
 import Aboutus from './components/Aboutus';
+import Services from './components/Services';
+import Offers from './components/Offers';
+import Team from './components/Team';
 
 const App = () => {
 
@@ -16,6 +19,9 @@ const App = () => {
         <Homepage />
         <Article />
         <Aboutus/>
+        <Services/>
+        <Offers/>
+        <Team/>
       </div>
     </>
 

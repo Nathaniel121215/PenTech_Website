@@ -1,0 +1,58 @@
+/* Customize dots */
+
+.slick-slider button {
+    display: block;
+  }
+  .slick-dots {
+    margin-top: 10px;
+    position: relative;
+    display: block !important;
+  }
+
+.slick-dots li button {
+    
+    font-size: 16px;
+    line-height: 1;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #7a7878;
+    border: none;
+    margin-right: 8px;
+    
+  }
+  
+  /* Active dot */
+  .slick-dots li.slick-active button {
+    background-color: #402158;
+  }
+  
+  /* Customize arrows */
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+  }
+  
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 30px;
+    line-height: 1;
+    color: #402158;
+  }
+  
+  .slick-prev {
+    left: 30px;
+    top: 165px;
+    display: none;
+  }
+  
+  .slick-next {
+    right: 30px;
+    top: 165px;
+  }

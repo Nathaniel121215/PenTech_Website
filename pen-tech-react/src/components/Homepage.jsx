@@ -50,7 +50,7 @@ const Homepage = () => {
                 animation: {
                   enable: true,
                   minimumValue: 0.5,
-                  speed: 2,
+                  speed: 4,
                   sync: false,
                 },
                 random: {
@@ -92,7 +92,7 @@ const Homepage = () => {
                   enable: true,
                   minimumValue: 0.5
                 },
-                value: 3.5
+                value: 5
               }
               
             }
