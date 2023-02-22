@@ -1,6 +1,6 @@
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
-import logo from '../assets/logo.png';
+
 
 
 const Homepage = () => {
