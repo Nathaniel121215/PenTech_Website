@@ -6,6 +6,7 @@ import Aboutus from './components/Aboutus';
 import Services from './components/Services';
 import Offers from './components/Offers';
 import Team from './components/Team';
+import Testimonial from './components/Testimonial';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         <Services/>
         <Offers/>
         <Team/>
+        <Testimonial/>
       </div>
     </>
 
