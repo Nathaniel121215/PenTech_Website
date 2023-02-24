@@ -7,6 +7,7 @@ import Services from './components/Services';
 import Offers from './components/Offers';
 import Team from './components/Team';
 import Testimonial from './components/Testimonial';
+import Contactus from './components/Contactus';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
         <Offers/>
         <Team/>
         <Testimonial/>
+        <Contactus/>
       </div>
     </>
 
