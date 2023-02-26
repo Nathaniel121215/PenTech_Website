@@ -1,19 +1,48 @@
-import { codes } from 'iso-3166-1';
-import { useEffect, useState } from 'react';
+import React, { useState } from "react";
+import CountryList from "react-select-country-list";
+import Select from 'react-select';
+
+
 
 const Contactus = () => {
 
-  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("");
 
-  useEffect(() => {
-    const countryList = [];
-    for (const countryCode in codes) {
-      const countryName = codes[countryCode];
-      const optionObject = { value: countryCode, label: countryName };
-      countryList.push(optionObject);
-    }
-    setCountries(countryList);
-  }, []);
+  const options = CountryList().getData();
+
+  const handleSelect = (option) => {
+    setSelectedCountry(option.value);
+  };
+
+  const customStyles = {
+    placeholder: (provided) => ({
+      ...provided,
+      color: '#9DA4B0', // replace with your desired color
+    }),
+    control: (provided, state) => ({
+      ...provided,
+      background: "#E2E9FF",
+      border: "none",
+      boxShadow: "none",
+      textcolor:"black",
+    }),
+    menu: (provided, state) => ({
+      ...provided,
+      background: "#E2E9FF",
+      border: "none"
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      background: state.isSelected ? "#C4C4C4" : "#E2E9FF",
+      color: state.isSelected ? "white" : "black",
+      "&:hover": {
+        background: "#C4C4C4"
+      }
+    })
+  };
+
+
+  
 
   return (
     <div className="z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center border-b border-gray-500">
@@ -37,11 +66,13 @@ const Contactus = () => {
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
                   id="name"
-                  placeholder="Name" />
+                  placeholder="Name"
+                  required />
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="email"
                   id="email"
-                  placeholder="Email" />
+                  placeholder="Email"
+                  required />
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
                   id="organization"
@@ -49,32 +80,44 @@ const Contactus = () => {
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
                   id="number"
-                  placeholder="Contact Number" />
-                <select id="country"
-                  name="country"
-                  className="bg-[#E2E9FF] text-black w-full p-[.7rem]">
-                  <option value="">-- Select a country --</option>
-                  {countries.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
-                  ))}
-                </select>
+                  placeholder="Contact Number"
+                  required />
+                <div>
+                  <Select className="bg-[#E2E9FF] text-black w-full p-[.3rem]"
+                  styles={customStyles}
+                    menuPlacement="bottom"
+                    id="country"
+                    name="country"
+                    value={selectedCountry}
+                    options={options}
+                    onChange={(option) => handleSelect(option.value)}
+                    placeholder="Country"
+                    required
+                  />
+                </div>
+                
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
-                  id="inquiry"
-                  placeholder="Inquiry" />
+                  id="topic"
+                  placeholder="Topic"
+                  required />
               </div>
               <div className="">
-                <textarea id="message" name="message"
-                  className="bg-[#E2E9FF] text-black p-[.7rem] h-40 mt-[2rem] w-full "
-                  placeholder="Message"></textarea>
+                <textarea required id="message" name="message"
+                  className="bg-[#E2E9FF] text-black p-[.7rem] h-40 mt-[2rem] w-full font-medium"
+                  placeholder="Message">
+                    
+                </textarea>
               </div>
-                        
-                        
+  
+              <button type="submit" className="w-full mt-5 py-4 px-8 sm:px-12   text-white font-medium bg-[#402158] rounded-[30px] hover:bg-[#7D5683] text-[15px] flex justify-center items-center">
+                    Submit
+              </button>
 
-
-
-                    </form>
+            </form>
                 </div>
+
+                
 
             </div>
             
