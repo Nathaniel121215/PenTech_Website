@@ -59,17 +59,17 @@ const Homepage = () => {
                 },
                 value: 1,
               },
-              // "shape": {
-              //   "type": "character",
-              //   "options": {
-              //     "character": {
-              //       "value": ["</>"],
-              //       "font": "Verdana",
-              //       "style": "",
-              //       "weight": ""
-              //     }
-              //   }
-              // },
+              "shape": {
+                "type": "character",
+                "options": {
+                  "character": {
+                    "value": ["</>"],
+                    "font": "Verdana",
+                    "style": "",
+                    "weight": ""
+                  }
+                }
+              },
 
 
             // "shape": {
@@ -83,16 +83,16 @@ const Homepage = () => {
               
           
               
-              shape: {
-                type: ["circle", "triangle"]	,
+              // shape: {
+              //   type: ["circle", "triangle"]	,
        
-              },
+              // },
               size: {
                 random: {
                   enable: true,
                   minimumValue: 0.5
                 },
-                value: 5
+                value: 10
               }
               
             }

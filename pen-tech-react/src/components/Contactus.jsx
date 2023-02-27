@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CountryList from "react-select-country-list";
 import Select from 'react-select';
+import axios from 'axios';
 
 
 
@@ -41,6 +42,28 @@ const Contactus = () => {
     })
   };
 
+  const [email, setEmail] = useState({
+    to: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setEmail({ ...email, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:5000/send-email', email)
+      .then(response => {
+        console.log(response.data);
+        setEmail({ to: '', subject: '', message: '' });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
 
   
 
@@ -61,7 +84,7 @@ const Contactus = () => {
             <div className="relative max-w-[650px] bg-[#402158] rounded-[10px] h-[450px] w-full"></div>
           </div>
           <div className="lg:px-6">
-            <form className="">
+            <form onSubmit={handleSubmit}>
               <div className="text-black grid grid-cols-1 gap-5 lg:grid-cols-2 font-medium">
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
@@ -71,8 +94,9 @@ const Contactus = () => {
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="email"
                   id="email"
+                  name="to"
                   placeholder="Email"
-                  required />
+                  required onChange={handleChange}/>
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
                   id="organization"
@@ -99,14 +123,15 @@ const Contactus = () => {
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
                   id="topic"
+                  name="subject"
                   placeholder="Topic"
-                  required />
+                  required onChange={handleChange}/>
               </div>
               <div className="">
                 <textarea required id="message" name="message"
                   className="bg-[#E2E9FF] text-black p-[.7rem] h-40 mt-[2rem] w-full font-medium"
-                  placeholder="Message">
-                    
+                  placeholder="Message" onChange={handleChange}>
+                  
                 </textarea>
               </div>
   
