@@ -3,7 +3,7 @@ import { loadFull } from "tsparticles";
 
 
 
-const Homepage = () => {
+const Homepage = ({mode}) => {
 
   const particlesInit = async (main) => {
     console.log(main);
@@ -15,11 +15,11 @@ const Homepage = () => {
     console.log(container);
   };
 
-
+  
   return (
     
-    <div className="w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center ">
-    <Particles
+    <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E]'}>
+    <Particles className={!mode ? '' : 'hidden'}
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}

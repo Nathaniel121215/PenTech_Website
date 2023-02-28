@@ -10,7 +10,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/send-email', (req, res) => {
-  const { to, subject, message } = req.body;
+  const { Customer_Name,
+  Customer_Email,
+  Customer_Organization,
+  Customer_Contact,
+  Customer_Country,
+  Customer_Topic,
+  Customer_Message, } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -19,13 +25,13 @@ app.post('/send-email', (req, res) => {
       pass: 'neafufgopcjqcezc'
     }
   });
-  const fromEmail = `"${to}" <${to}>`;
+  // const fromEmail = `"${to}" <${to}>`;
 
   const mailOptions = {
-    from: `${to} <${to}>`,
+    from: `${Customer_Name} <${Customer_Email}>`,
     to:'nathaniel121215@gmail.com',
-    subject,
-    text: message
+    subject:Customer_Topic,
+    text: Customer_Message + '\n\n\n' + 'Email: '  + Customer_Email + '\n' + 'Organization: '+ Customer_Organization + '\n' + 'Contact: '  + Customer_Contact + '\n' + 'Country: '  + Customer_Country,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -34,7 +40,8 @@ app.post('/send-email', (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
-      res.send('Email sent successfully');
+      // res.send('Email sent successfully');
+      res.send(Customer_Organization);
     }
   });
 });

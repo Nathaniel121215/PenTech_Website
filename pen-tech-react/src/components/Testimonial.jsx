@@ -6,7 +6,7 @@ const Testimonial = () => {
   return (
     <div className="z-20 bg-[#402158] py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center">
         <div className="max-w-[1581px]">
-            <div className="text-white flex flex-col justify-center items-center text-center">
+            <div className="text-white flex flex-col justify-center items-center text-center px-5">
                 <div className="text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold">
                     Best Word’s From Our Clients
                 </div>

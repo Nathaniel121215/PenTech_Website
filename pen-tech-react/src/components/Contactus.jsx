@@ -13,6 +13,7 @@ const Contactus = () => {
 
   const handleSelect = (option) => {
     setSelectedCountry(option.value);
+    
   };
 
   const customStyles = {
@@ -43,9 +44,14 @@ const Contactus = () => {
   };
 
   const [email, setEmail] = useState({
-    to: '',
-    subject: '',
-    message: ''
+    Customer_Name: '',
+    Customer_Email: '',
+    Customer_Organization: '',
+    Customer_Contact:'',
+    Customer_Country:'',
+    Customer_Topic:'',
+    Customer_Message:'',
+
   });
 
   const handleChange = (e) => {
@@ -57,7 +63,16 @@ const Contactus = () => {
     axios.post('http://localhost:5000/send-email', email)
       .then(response => {
         console.log(response.data);
-        setEmail({ to: '', subject: '', message: '' });
+        setEmail({Customer_Name: '', 
+        Customer_Email: '', 
+        Customer_Organization: '', 
+        Customer_Contact: '', 
+        Customer_Country: '', 
+        Customer_Topic: '', 
+        Customer_Message: ''  });
+
+        setSelectedCountry("");
+
       })
       .catch(error => {
         console.log(error);
@@ -70,8 +85,8 @@ const Contactus = () => {
   return (
     <div className="z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center border-b border-gray-500">
       <div className="max-w-[1581px] w-full">
-        <div className="flex flex-col justify-center items-center text-center">
-          <div className="text-[#402158] text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold">
+        <div className="flex flex-col justify-center items-center text-center px-5">
+          <div className="text-[#402158] text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold ">
             Get Answer To Your Questions
           </div>
           <div className="sm:text-[15px] md:text-[18px] mt-3 font-medium">
@@ -88,49 +103,70 @@ const Contactus = () => {
               <div className="text-black grid grid-cols-1 gap-5 lg:grid-cols-2 font-medium">
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
-                  id="name"
+                  id="Customer_Name"
+                  name="Customer_Name"
                   placeholder="Name"
-                  required />
+                  required
+                  onChange={handleChange} 
+                  value={email.Customer_Name}/>
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="email"
-                  id="email"
-                  name="to"
+                  id="Customer_Email"
+                  name="Customer_Email"
                   placeholder="Email"
-                  required onChange={handleChange}/>
+                  required onChange={handleChange}
+                  value={email.Customer_Email}/>
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
-                  id="organization"
-                  placeholder="Organization" />
+                  id="Customer_Organization"
+                  name="Customer_Organization"
+                  placeholder="Organization"
+                  onChange={handleChange} 
+                  value={email.Customer_Organization}/>
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
-                  id="number"
+                  id="Customer_Contact"
+                  name="Customer_Contact"
                   placeholder="Contact Number"
-                  required />
+                  required
+                  onChange={handleChange}
+                  value={email.Customer_Contact} />
                 <div>
                   <Select className="bg-[#E2E9FF] text-black w-full p-[.3rem]"
                   styles={customStyles}
                     menuPlacement="bottom"
-                    id="country"
-                    name="country"
+                    id="Customer_Country"
+                    name="Customer_Country"
                     value={selectedCountry}
                     options={options}
-                    onChange={(option) => handleSelect(option.value)}
+                    onChange={(option) => {
+                      handleSelect(option.value);
+                      handleChange({
+                        target: {
+                          name: "Customer_Country",
+                          value: option.value,
+                        },
+                      });
+                    }}
                     placeholder="Country"
                     required
+                    
                   />
                 </div>
                 
                 <input className="bg-[#E2E9FF] text-black w-full p-[.7rem]"
                   type="text"
-                  id="topic"
-                  name="subject"
+                  id="Customer_Topic"
+                  name="Customer_Topic"
                   placeholder="Topic"
-                  required onChange={handleChange}/>
+                  required onChange={handleChange}
+                  value={email.Customer_Topic}/>
               </div>
               <div className="">
-                <textarea required id="message" name="message"
+                <textarea required id="Customer_Message" name="Customer_Message"
                   className="bg-[#E2E9FF] text-black p-[.7rem] h-40 mt-[2rem] w-full font-medium"
-                  placeholder="Message" onChange={handleChange}>
+                  placeholder="Message" onChange={handleChange}
+                  value={email.Customer_Message}>
                   
                 </textarea>
               </div>
