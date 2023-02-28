@@ -1,5 +1,5 @@
 
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Homepage from './components/Homepage';
 import Article from './components/Article';
 import Aboutus from './components/Aboutus';
