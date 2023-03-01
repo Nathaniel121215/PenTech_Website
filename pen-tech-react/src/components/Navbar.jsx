@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-scroll'
 import { Bars3BottomRightIcon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
 const Navbar = () => {
 

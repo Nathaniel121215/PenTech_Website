@@ -24,9 +24,7 @@ const Homepage = ({mode}) => {
           init={particlesInit}
           loaded={particlesLoaded}
               options={{
-            background: {
-              color: '#f1f1f1',
-            },
+                background: { color: mode ? '#ffffff' : '#000000', },
             fpsLimit: 40,
             interactivity: {
               events: {
