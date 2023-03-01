@@ -19,12 +19,12 @@ const Homepage = ({mode}) => {
   return (
     
     <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E] '}>
-    <Particles className={!mode ? '' : 'hidden'}
+    <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
               options={{
-                background: { color: mode ? '#ffffff' : '#000000', },
+                background: { color: !mode ? '#ffffff' : '#000000', },
             fpsLimit: 40,
             interactivity: {
               events: {
