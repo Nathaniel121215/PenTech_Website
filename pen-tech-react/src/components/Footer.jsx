@@ -59,8 +59,8 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col max-w-[1581px] py-4 mx-auto justify-between sm:flex-row text-center px-5'>
-        <p className='py-4'>2022 Workflow, LLC. All rights reserved</p>
-        <div className='flex justify-between sm:w-[300px] pt-4 text-2xl'>
+        <p className='py-4 px-4'>2022 Workflow, LLC. All rights reserved</p>
+        <div className='flex justify-between sm:w-[300px] pt-4 text-2xl px-4'>
             <FaFacebook className='hover:-translate-y-3 ease-in-out duration-500'/>
             <FaInstagram className='hover:-translate-y-3 ease-in-out duration-500'/>
             <FaTwitter className='hover:-translate-y-3 ease-in-out duration-500'/>

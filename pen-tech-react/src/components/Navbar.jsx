@@ -35,11 +35,11 @@ const Navbar = () => {
             </div>
           <div className='flex items-center'>
             <ul className='hidden lg:flex font-bold'>
-            <li className='px-7 text-[#140E36] hover:text-[#7D5683] cursor-pointer'><Link to="/" smooth={true} duration={500}>Home</Link></li>
-            <li className='px-7 text-[#140E36] hover:text-[#7D5683] cursor-pointer'><Link to="aboutus" smooth={true} duration={500}>About Us</Link></li>
-            <li className='px-7 text-[#140E36] hover:text-[#7D5683] cursor-pointer'><Link to="program" smooth={true} duration={500}>Services</Link></li>
-            <li className='px-7 text-[#140E36] hover:text-[#7D5683] cursor-pointer'><Link to="fqa" smooth={true} duration={500}>Team</Link></li>
-            <li className='px-7 text-[#140E36] hover:text-[#7D5683] cursor-pointer'><Link to="pricing" smooth={true}  duration={500}>Insights</Link></li>
+            <li className='px-7 text-[#272626] hover:text-[#7D5683] cursor-pointer'><Link to="/" smooth={true} duration={500}>Home</Link></li>
+            <li className='px-7 text-[#272626] hover:text-[#7D5683] cursor-pointer'><Link to="aboutus" smooth={true} duration={500}>About Us</Link></li>
+            <li className='px-7 text-[#272626] hover:text-[#7D5683] cursor-pointer'><Link to="program" smooth={true} duration={500}>Services</Link></li>
+            <li className='px-7 text-[#272626] hover:text-[#7D5683] cursor-pointer'><Link to="fqa" smooth={true} duration={500}>Team</Link></li>
+            <li className='px-7 text-[#272626] hover:text-[#7D5683] cursor-pointer'><Link to="pricing" smooth={true}  duration={500}>Insights</Link></li>
             
             </ul>
           </div>

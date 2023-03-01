@@ -1,19 +1,19 @@
 
 
-const Offers = () => {
+const Offers = ({mode}) => {
 
  
     return (
-        <div className="z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center bg-[#402158]">
+        <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center bg-[#1E1E1E]'}>
             <div className="max-w-[1581px] w-full flex justify-center items-center">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 px-5 gap-[2rem] 2xl:gap-[6rem]">
 
-                    <div className="">
-                        <div className="text-[45px] sm:text-[50px] lg:text-[60px] font-bold text-white">
+                    <div className={!mode ? 'text-[#272626]' : 'text-white'}>
+                        <div className={!mode ? 'text-[45px] sm:text-[50px] lg:text-[60px] font-bold text-[#402158]' : 'text-[45px] sm:text-[50px] lg:text-[60px] font-bold '}>
                             What Makes Us The Best From Others?
                         </div>
-                        <div className="sm:text-[15px] md:text-[18px] font-medium mt-[1rem] text-white">
+                        <div className="sm:text-[15px] md:text-[18px] font-medium mt-[1rem]">
                             Welcome to PEN Tech Solution! We are a premier
                             IT company that specializes in developing custom
                             websites and software solutions for a diverse range
@@ -28,7 +28,7 @@ const Offers = () => {
                                     
                                 </div>
                             </div>
-                            <div>
+                            <div className={!mode ? 'text-[#272626]' : 'text-white'}>
                                 <div className="text-[20px] font-bold">
                                     5 Years Of Experience
                                 </div>
@@ -46,7 +46,7 @@ const Offers = () => {
                                     
                                 </div>
                             </div>
-                            <div>
+                            <div className={!mode ? 'text-[#272626]' : 'text-white'}>
                                 <div className="text-[20px] font-bold">
                                     5 Years Of Experience
                                 </div>
@@ -65,7 +65,7 @@ const Offers = () => {
                                     
                                 </div>
                             </div>
-                            <div>
+                            <div className={!mode ? 'text-[#272626]' : 'text-white'}>
                                 <div className="text-[20px] font-bold">
                                     5 Years Of Experience
                                 </div>
@@ -83,7 +83,7 @@ const Offers = () => {
                                     
                                 </div>
                             </div>
-                            <div>
+                            <div className={!mode ? 'text-[#272626]' : 'text-white'}>
                                 <div className="text-[20px] font-bold">
                                     5 Years Of Experience
                                 </div>

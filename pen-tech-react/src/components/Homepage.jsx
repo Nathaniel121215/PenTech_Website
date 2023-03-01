@@ -18,7 +18,7 @@ const Homepage = ({mode}) => {
   
   return (
     
-    <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E]'}>
+    <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E] '}>
     <Particles className={!mode ? '' : 'hidden'}
           id="tsparticles"
           init={particlesInit}
@@ -29,7 +29,6 @@ const Homepage = ({mode}) => {
             },
             fpsLimit: 40,
             interactivity: {
-              detectsOn: 'canvas',
               events: {
                 resize: true
               },
@@ -98,16 +97,17 @@ const Homepage = ({mode}) => {
             }
           }}
       />  
+      
 
         <div className="grid md:grid-cols-2 max-w-[1581px] md:mt-[3rem]  w-full px-5 my-6 gap-[2rem] 2xl:gap-[6rem] z-20 ">
             <div className="border-solid">
-                <div className="text-[45px] sm:text-[50px] md:text-[40px] lg:text-[60px] 2xl:text-[70px] font-bold text-[#402158]">
+                <div className={!mode ? 'text-[45px] sm:text-[50px] md:text-[40px] lg:text-[60px] 2xl:text-[70px] font-bold text-[#402158]' : 'text-[45px] sm:text-[50px] md:text-[40px] lg:text-[60px] 2xl:text-[70px] font-bold text-white'} >
                 We Bring Your 
                 Business To The 
                 Path of Success.
                 </div>
                 
-                <div className="sm:text-[15px] md:text-[18px] font-medium mt-4">
+                <div className={!mode ? 'sm:text-[15px] md:text-[18px] font-medium mt-4 text-[#272626]' : 'sm:text-[15px] md:text-[18px] font-medium mt-4 text-white'} >
                 We help visionary executives transform their ventures with
                 technology to thrive in the digital era with more than 5 years
                 of experience.
@@ -122,7 +122,7 @@ const Homepage = ({mode}) => {
                 </div>
             </div>
             <div className="w-full flex justify-center items-center">
-                <div className="relative max-w-[737px] bg-[#402158] rounded-[10px] h-[450px] w-full">
+                <div className={!mode ? 'relative max-w-[737px] bg-[#402158] rounded-[10px] h-[450px] w-full' : 'relative max-w-[737px] bg-[#ffffff] rounded-[10px] h-[450px] w-full'} >
 
                 </div>
             </div>
