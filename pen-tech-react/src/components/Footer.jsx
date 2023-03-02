@@ -53,7 +53,7 @@ const Footer = ({mode}) => {
                 <p className={!mode ? 'py-4 text-black' : 'py-4 text-white'}>The latest news, articles, and resources, sent to your inbox weekly.</p>
                 <form className='flex flex-col sm:flex-row'>
                     <input className='text-black font-medium border-2 border-[#424242] w-full p-3 mr-4 rounded-lg mb-4' type="email" placeholder='Enter email..'/>
-                    <button className='h-[3rem] font-medium p-2 px-6 mb-4 bg-[#7D5683] rounded text-white'>Subscribe</button>
+                    <button className='h-[3rem] font-medium p-2 px-6 mb-4 bg-[#402158] hover:bg-[#7D5683] rounded text-white'>Subscribe</button>
                 </form>
             </div>
         </div>
