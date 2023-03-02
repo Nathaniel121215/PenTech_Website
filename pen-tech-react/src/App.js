@@ -13,8 +13,12 @@ import Footer from './components/Footer'
 import React, {useState} from 'react';
 import { Bars3BottomRightIcon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 // import logo from './assets/logo.png';
-import logo1 from './assets/1.png';
-import logo2 from './assets/2.png';
+// import logo1 from './assets/1.png';
+// import logo2 from './assets/2.png';
+
+
+import lightlogo from './assets/light-logo.png';
+import darklogo from './assets/dark-logo.png';
 
 
 import { Link } from 'react-scroll';
@@ -49,7 +53,7 @@ const App = () => {
         <div className={!mode ? 'h-[70px] lg:h-[100px] px-4 flex justify-between items-center w-full bg-white lg z-20 relative' : 'h-[70px] lg:h-[100px] px-4 flex justify-between items-center w-full bg-[#1D2226] lg z-20 relative'}>
             <Link onClick={handleClose2} to="/" smooth={true} duration={500}>
               <div className='flex items-center justify-center '>
-                <img onClick={handleClose2} to="/" smooth={true} duration={500} src={!mode ? logo2 : logo1} alt="/" className='w-[8rem] md:w-[9rem] cursor-pointer'></img>
+                <img onClick={handleClose2} to="/" smooth={true} duration={500} src={!mode ? lightlogo : darklogo} alt="/" className='w-[3.7rem] md:w-[5rem] cursor-pointer'></img>
               </div>
             </Link>
           <div className='flex items-center'>
