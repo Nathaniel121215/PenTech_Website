@@ -171,7 +171,7 @@ const Contactus = ({mode}) => {
                 </textarea>
               </div>
   
-              <button type="submit" className="w-full mt-5 py-4 px-8 sm:px-12   text-white font-medium bg-[#7D5683] rounded-[30px] hover:bg-[#7D5683] text-[15px] flex justify-center items-center">
+              <button type="submit" className="w-full mt-5 py-4 px-8 sm:px-12   text-white font-medium bg-[#402158] rounded-[30px] hover:bg-[#7D5683] text-[15px] flex justify-center items-center">
                     Submit
               </button>
 
