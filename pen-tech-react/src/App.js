@@ -101,9 +101,9 @@ const App = () => {
         <Aboutus mode={mode}/>
         <Services mode={mode}/>
         <Offers mode={mode}/>
-        <Team/>
-        <Testimonial/>
-        <Contactus/>
+        <Team mode={mode}/>
+        <Testimonial mode={mode}/>
+        <Contactus mode={mode}/>
         <Footer/>
       </div>
     </>

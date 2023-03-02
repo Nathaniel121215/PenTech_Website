@@ -24,7 +24,11 @@
   
   /* Active dot */
   .slick-dots li.slick-active button {
-    background-color: #402158;
+    background-color: #fff;
+  }
+
+  .slick-dots li button:before {
+    display: none;
   }
   
   /* Customize arrows */

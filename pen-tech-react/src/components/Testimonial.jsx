@@ -1,16 +1,16 @@
 
-const Testimonial = () => {
+const Testimonial = ({mode}) => {
 
 
 
   return (
-    <div className="z-20 bg-[#402158] py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center">
+    <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center'}>
         <div className="max-w-[1581px]">
             <div className="text-white flex flex-col justify-center items-center text-center px-5">
-                <div className="text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold">
+                <div className={!mode ? 'text-[#402158] text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold' : 'text-[#ffff] text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold'}>
                     Best Word’s From Our Clients
                 </div>
-                <div className="sm:text-[15px] md:text-[18px] mt-3 font-medium">
+                <div className={!mode ? 'sm:text-[15px] md:text-[18px] mt-3 font-medium text-[#272626]' : 'sm:text-[15px] md:text-[18px] mt-3 font-medium text-[#ffff]'}>
                     Read what our past clients have to say about our services. They come from diverse industries and have
                     different needs, but they all share their positive experience working with us.
                 </div>

@@ -1,16 +1,16 @@
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
-
+import React, { useCallback } from 'react';
 
 
 const Homepage = ({mode}) => {
 
-  const particlesInit = async (main) => {
+  const particlesInit = useCallback(async (main) => {
     console.log(main);
  
     await loadFull(main);
-  };
- 
+  }, []);
+
   const particlesLoaded = (container) => {
     console.log(container);
   };
@@ -20,81 +20,61 @@ const Homepage = ({mode}) => {
     
     <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E] '}>
     <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-              options={{
-                background: { color: !mode ? '#ffffff' : '#000000', },
-            fpsLimit: 40,
-            interactivity: {
-              events: {
-                resize: true
-              },
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: { color: !mode ? '#ffffff' : '#1E1E1E', },
+          fpsLimit: 40,
+          interactivity: {
+            events: {
+              resize: true
             },
-            particles: {
-              color: {
-                value: "#162747"
+          },
+          particles: {
+            color: !mode ? '#1E1E1E' : '#ffff',
+            number: {
+              density: {
+                enable: true,
+                area: 1080
               },
-              number: {
-                density: {
-                  enable: true,
-                  area: 1080
-                },
-                limit: 0,
-                value: 70,
+              limit: 0,
+              value: 70,
+            },
+            opacity: {
+              animation: {
+                enable: true,
+                minimumValue: 0.5,
+                speed: 4,
+                sync: false,
               },
-              opacity: {
-                animation: {
-                  enable: true,
-                  minimumValue: 0.5,
-                  speed: 4,
-                  sync: false,
-                },
-                random: {
-                  enable: true,
-                  minimumValue: 0.1,
-                },
-                value: 1,
+              random: {
+                enable: true,
+                minimumValue: 0.1,
               },
-              "shape": {
-                "type": "character",
-                "options": {
-                  "character": {
-                    "value": ["</>"],
-                    "font": "Verdana",
-                    "style": "",
-                    "weight": ""
-                  }
+              value: 1,
+            },
+            shape: {
+              type: "character",
+              options: {
+                character: {
+                  value: ["</>"],
+                  font: "Verdana",
+                  style: "",
+                  weight: ""
                 }
-              },
-
-
-            // "shape": {
-            //     "type": "image",
-            //     "image": {
-            //         "src": arcee,
-            //         "width": 100,
-            //         "height": 100
-            //     }
-            // },
-              
-          
-              
-              // shape: {
-              //   type: ["circle", "triangle"]	,
-       
-              // },
-              size: {
-                random: {
-                  enable: true,
-                  minimumValue: 0.5
-                },
-                value: 10
               }
-              
+            },
+            size: {
+              random: {
+                enable: true,
+                minimumValue: 0.5
+              },
+              value: 10
             }
-          }}
-      />  
+          }
+        }}
+      />
       
 
         <div className="grid md:grid-cols-2 max-w-[1581px] md:mt-[3rem]  w-full px-5 my-6 gap-[2rem] 2xl:gap-[6rem] z-20 ">
