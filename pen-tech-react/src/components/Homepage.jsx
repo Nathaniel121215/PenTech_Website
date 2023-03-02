@@ -39,7 +39,7 @@ const Homepage = ({mode}) => {
                 area: 1080
               },
               limit: 0,
-              value: !mode ? 70 : 70,
+              value: !mode ? 70 : 30,
             },
             opacity: {
               animation: {
