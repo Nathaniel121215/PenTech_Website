@@ -53,7 +53,7 @@ const App = () => {
         <div className={!mode ? 'h-[70px] lg:h-[100px] px-4 flex justify-between items-center w-full bg-white lg z-20 relative' : 'h-[70px] lg:h-[100px] px-4 flex justify-between items-center w-full bg-[#1D2226] lg z-20 relative'}>
             <Link onClick={handleClose2} to="/" smooth={true} duration={500}>
               <div className='flex items-center justify-center '>
-                <img onClick={handleClose2} to="/" smooth={true} duration={500} src={!mode ? lightlogo : darklogo} alt="/" className='w-[3.7rem] md:w-[5rem] cursor-pointer'></img>
+                <img onClick={handleClose2} to="/" smooth={true} duration={500} src={!mode ? lightlogo : darklogo} alt="/" className='w-[3.7rem] lg:w-[5rem] cursor-pointer'></img>
               </div>
             </Link>
           <div className='flex items-center'>
