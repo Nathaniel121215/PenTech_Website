@@ -4,7 +4,7 @@ const Aboutus = ({mode}) => {
 
  
     return (
-      <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 bg-[#1E1E1E] py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center'}>
+      <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center'}>
         <div className="max-w-[1581px]">
             <div className="text-white flex flex-col justify-center items-center text-center px-5">
                 <div className={!mode ? 'text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold text-[#402158]' : 'text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold text-white'} >

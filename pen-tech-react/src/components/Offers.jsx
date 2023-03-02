@@ -4,7 +4,7 @@ const Offers = ({mode}) => {
 
  
     return (
-        <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center bg-[#1E1E1E]'}>
+        <div className={!mode ? 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center' : 'z-20 py-[3rem] sm:py-[4rem] md:py-[5rem] lg:py-[6rem] flex justify-center items-center'}>
             <div className="max-w-[1581px] w-full flex justify-center items-center">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 px-5 gap-[2rem] 2xl:gap-[6rem]">

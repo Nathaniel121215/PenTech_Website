@@ -54,23 +54,29 @@ const Homepage = ({mode}) => {
               },
               value: 1,
             },
+            // shape: {
+            //   type: "character",
+            //   options: {
+            //     character: {
+            //       value: ["</>"],
+            //       font: "Verdana",
+            //       style: "",
+            //       weight: ""
+            //     }
+            //   }
+            // },
+
             shape: {
-              type: "character",
-              options: {
-                character: {
-                  value: ["</>"],
-                  font: "Verdana",
-                  style: "",
-                  weight: ""
-                }
-              }
+              type: ["circle", "triangle"]	,
+
             },
+
             size: {
               random: {
                 enable: true,
                 minimumValue: 0.5
               },
-              value: !mode ? 10 : 10,
+              value: !mode ? 5 : 5,
             }
           }
         }}
