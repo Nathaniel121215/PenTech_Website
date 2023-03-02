@@ -104,7 +104,7 @@ const App = () => {
         <Team mode={mode}/>
         <Testimonial mode={mode}/>
         <Contactus mode={mode}/>
-        <Footer/>
+        <Footer mode={mode}/>
       </div>
     </>
 
