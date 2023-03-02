@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CountryList from "react-select-country-list";
 import Select from 'react-select';
 import axios from 'axios';
-
+import contact from '../assets/contact.png';
 
 
 const Contactus = ({mode}) => {
@@ -96,12 +96,12 @@ const Contactus = ({mode}) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-[4rem] gap-[3rem] px-5">
           <div className="w-full flex justify-center items-center">
-            <div className="relative max-w-[650px] bg-[#ffff] rounded-[10px] h-[450px] w-full"></div>
+            <img src={contact} alt="/" className='max-w-[35rem] w-full'></img>
           </div>
           <div className="lg:px-6">
             <form onSubmit={handleSubmit}>
               <div className="text-black grid grid-cols-1 gap-5 lg:grid-cols-2 font-medium">
-                <input className="bg-[#ffff] text-black w-full p-[.7rem]"
+                <input className="bg-[#ffff] text-black w-full p-[.7rem] rounded-md"
                   type="text"
                   id="Customer_Name"
                   name="Customer_Name"
@@ -109,21 +109,21 @@ const Contactus = ({mode}) => {
                   required
                   onChange={handleChange} 
                   value={email.Customer_Name}/>
-                <input className="bg-[#ffff] text-black w-full p-[.7rem]"
+                <input className="bg-[#ffff] text-black w-full p-[.7rem] rounded-md"
                   type="email"
                   id="Customer_Email"
                   name="Customer_Email"
                   placeholder="Email"
                   required onChange={handleChange}
                   value={email.Customer_Email}/>
-                <input className="bg-[#ffff] text-black w-full p-[.7rem]"
+                <input className="bg-[#ffff] text-black w-full p-[.7rem] rounded-md"
                   type="text"
                   id="Customer_Organization"
                   name="Customer_Organization"
                   placeholder="Organization"
                   onChange={handleChange} 
                   value={email.Customer_Organization}/>
-                <input className="bg-[#ffff] text-black w-full p-[.7rem]"
+                <input className="bg-[#ffff] text-black w-full p-[.7rem] rounded-md"
                   type="text"
                   id="Customer_Contact"
                   name="Customer_Contact"
@@ -132,7 +132,7 @@ const Contactus = ({mode}) => {
                   onChange={handleChange}
                   value={email.Customer_Contact} />
                 <div>
-                  <Select className="bg-[#ffff] text-black w-full p-[.3rem]"
+                  <Select className="bg-[#ffff] text-black w-full p-[.3rem] rounded-md"
                   styles={customStyles}
                     menuPlacement="bottom"
                     id="Customer_Country"
@@ -154,7 +154,7 @@ const Contactus = ({mode}) => {
                   />
                 </div>
                 
-                <input className="bg-[#ffff] text-black w-full p-[.7rem]"
+                <input className="bg-[#ffff] text-black w-full p-[.7rem] rounded-md"
                   type="text"
                   id="Customer_Topic"
                   name="Customer_Topic"
@@ -164,7 +164,7 @@ const Contactus = ({mode}) => {
               </div>
               <div className="">
                 <textarea required id="Customer_Message" name="Customer_Message"
-                  className="bg-[#ffff] text-black p-[.7rem] h-40 mt-[2rem] w-full font-medium"
+                  className="bg-[#ffff] text-black p-[.7rem] h-40 mt-[2rem] w-full font-medium rounded-md"
                   placeholder="Message" onChange={handleChange}
                   value={email.Customer_Message}>
                   

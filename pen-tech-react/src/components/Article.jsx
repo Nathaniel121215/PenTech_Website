@@ -26,7 +26,7 @@ const Article = ({mode}) => {
             </div>
           </div>
           <div className="flex justify-center items-center">
-                <img src={article} alt="/" className='max-w-[35rem]'></img>
+                <img src={article} alt="/" className='max-w-[35rem] w-full'></img>
             </div>
           
       </div>
