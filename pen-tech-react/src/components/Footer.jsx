@@ -11,7 +11,7 @@ import {
 const Footer = ({mode}) => {
   return (
     <div className={!mode ? 'w-full  text-white py-9 z-20 bg-[#ffff]' : 'w-full  text-white py-9 z-20 bg-[#1E1E1E]'}>
-        <div className='max-w-[1581px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8 px-5 gap-[2.5rem] '>
+        <div className='max-w-[1581px] mx-auto grid grid-cols-2 lg:grid-cols-6 border-b-2 border-gray-600 py-8 px-5 gap-[2.5rem] '>
             <div className='px-4'>
                 <h6 className={!mode ? 'text-black font-bold uppercase py-2' : 'text-white font-bold uppercase py-2'}>Navigation</h6>
                 <ul className={!mode ? 'text-black' : 'text-white'}>

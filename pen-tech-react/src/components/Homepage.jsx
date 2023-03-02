@@ -1,7 +1,7 @@
 import Particles from 'react-tsparticles'
 import { loadFull } from "tsparticles";
 import React, { useCallback } from 'react';
-
+import landing from '../assets/landing.png';
 
 const Homepage = ({mode}) => {
 
@@ -18,7 +18,7 @@ const Homepage = ({mode}) => {
   
   return (
     
-    <div className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E] '}>
+    <div name="/" className={!mode ? 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center' : 'w-full h-full pt-[70px]  lg:pt-[0px] lg:h-screen flex lg:justify-center lg:items-center bg-[#1E1E1E] '}>
     <Particles
         id="tsparticles"
         init={particlesInit}
@@ -106,8 +106,8 @@ const Homepage = ({mode}) => {
                 </div>
             </div>
             <div className="w-full flex justify-center items-center">
-                <div className={!mode ? 'relative max-w-[737px] bg-[#402158] rounded-[10px] h-[450px] w-full' : 'relative max-w-[737px] bg-[#ffffff] rounded-[10px] h-[450px] w-full'} >
-
+                <div className={!mode ? '' : ''} >
+                  <img src={landing} alt="/" className='w-full h-full'></img>
                 </div>
             </div>
         </div>

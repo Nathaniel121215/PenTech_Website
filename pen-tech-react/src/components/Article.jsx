@@ -1,19 +1,19 @@
 
-
+import article from '../assets/Article.png';
 const Article = ({mode}) => {
 
  
   return (
-    <div className={!mode ? 'w-full z-20 flex justify-center items-center relative border-t border-gray-500 bg-[#402158]' : 'w-full z-20 flex justify-center items-center relative bg-[#1D2226]'}>
+    <div name="aboutus" className={!mode ? 'w-full z-20 flex justify-center items-center relative border-t border-gray-500 bg-[#402158]' : 'w-full z-20 flex justify-center items-center relative bg-[#1D2226]'}>
 
 
       <div className=' w-full max-w-[1581px] h-full  grid grid-cols-1 md:grid-cols-2 px-5 py-[3rem] sm:py--[4rem] md:py-[5rem] gap-[2rem] 2xl:gap-[6rem]'>
           
           <div className="grid-column-[1] md:order-2">
-            <div className={!mode ? 'text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold text-[#ffff]' : 'text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold text-white'}>
+            <div className={!mode ? 'text-[45px] sm:text-[50px] md:text-[40px] lg:text-[50px] font-bold text-[#ffff]' : 'text-[45px] sm:text-[50px] lg:text-[60px] 2xl:text-[50px] font-bold text-white'}>
               What is PEN Tech Solution?
             </div>
-            <div className={!mode ? 'sm:text-[15px] md:text-[18px] font-medium mt-4 text-white' : 'sm:text-[15px] md:text-[18px] font-medium mt-4 text-white'}>
+            <div className={!mode ? 'sm:text-[15px] md:text-[18px] mt-4 text-white' : 'sm:text-[15px] md:text-[18px] mt-4 text-white'}>
             Welcome to PEN Tech Solution! We are a premier IT company that 
             specializes in developing custom websites and software solutions for 
             a diverse range of clients. Our team of experts is dedicated to providing 
@@ -25,13 +25,9 @@ const Article = ({mode}) => {
                 </div>
             </div>
           </div>
-          <div className="grid-column-[2] md:order-1">
-            <div className="w-full flex justify-center items-center">
-              <div className={!mode ? 'relative max-w-[737px] bg-[#ffff] rounded-[10px] h-[450px] w-full' : 'relative max-w-[737px] bg-[#ffff] rounded-[10px] h-[450px] w-full'}>
-              </div>
+          <div className="flex justify-center items-center">
+                <img src={article} alt="/" className='max-w-[35rem]'></img>
             </div>
-
-          </div>
           
       </div>
 
