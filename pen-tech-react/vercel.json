@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/send-email",
-        "destination": "https://pen-tech-website-voqn.vercel.app/api/send-email"
+        "destination": "https://pen-tech-website-server.vercel.app/api/send-email"
       }
     ]
   }
