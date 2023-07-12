@@ -1,8 +1,8 @@
 {
-    "rewrites": [
+    "routes": [
       {
-        "source": "/api/send-email",
-        "destination": "https://pen-tech-website-server.vercel.app/api/send-email"
+        "src": "/api/send-email",
+        "dest": "https://pen-tech-website-server.vercel.app/send-email"
       }
     ]
   }
