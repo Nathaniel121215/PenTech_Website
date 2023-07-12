@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/send-email",
+        "destination": "https://pen-tech-website-server.vercel.app/send-email"
+      }
+    ]
+  }
