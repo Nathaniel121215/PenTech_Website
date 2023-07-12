@@ -40,7 +40,7 @@ app.post('https://pen-tech-website-server.vercel.app/api/send-email', (req, res)
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
-      // res.header('Access-Control-Allow-Origin', 'https://pen-tech-website-voqn.vercel.app');
+      res.header('Access-Control-Allow-Origin', 'https://pen-tech-website-voqn.vercel.app');
       res.send(Customer_Organization);
     }
   });
