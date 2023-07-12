@@ -5,12 +5,7 @@ const cors = require('cors');
 
 const app = express();
 
-const corsOptions = {
-  origin: 'https://pen-tech-website-voqn.vercel.app',
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -45,7 +40,6 @@ app.post('/send-email', (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
-      // res.send('Email sent successfully');
       res.header('Access-Control-Allow-Origin', 'https://pen-tech-website-voqn.vercel.app');
       res.send(Customer_Organization);
     }
