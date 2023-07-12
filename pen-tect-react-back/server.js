@@ -46,6 +46,7 @@ app.post('/send-email', (req, res) => {
     } else {
       console.log('Email sent: ' + info.response);
       // res.send('Email sent successfully');
+      res.header('Access-Control-Allow-Origin', 'https://pen-tech-website-voqn.vercel.app');
       res.send(Customer_Organization);
     }
   });
