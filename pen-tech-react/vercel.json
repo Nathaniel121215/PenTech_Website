@@ -1,9 +1,0 @@
-{
-    "routes": [
-      {
-        "src": "/api/send-email",
-        "dest": "https://pen-tech-website-server.vercel.app/send-email"
-      }
-    ]
-  }
-  

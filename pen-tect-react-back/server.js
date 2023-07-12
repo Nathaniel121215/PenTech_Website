@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/api/send-email', (req, res) => {
+app.post('/send-email', (req, res) => {
   const { Customer_Name,
   Customer_Email,
   Customer_Organization,
@@ -40,12 +40,12 @@ app.post('/api/send-email', (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
-      // res.header('Access-Control-Allow-Origin', 'https://pen-tech-website-voqn.vercel.app');
+      // res.send('Email sent successfully');
       res.send(Customer_Organization);
     }
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
+app.listen(5000, () => {
+  console.log('Server started on port 5000');
 });
