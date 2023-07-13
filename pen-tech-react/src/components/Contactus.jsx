@@ -60,7 +60,7 @@ const Contactus = ({mode}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/send-email', email)
+    axios.post('https://pen-tech-solution.netlify.app//send-email', email)
       .then(response => {
         console.log(response.data);
         setEmail({Customer_Name: '', 
