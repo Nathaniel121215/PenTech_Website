@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('https://pen-tech-solution.netlify.app/send-email', (req, res) => {
+app.post('/send-email', (req, res) => {
   const { Customer_Name,
   Customer_Email,
   Customer_Organization,
@@ -46,6 +46,6 @@ app.post('https://pen-tech-solution.netlify.app/send-email', (req, res) => {
   });
 });
 
-// app.listen(5000, () => {
-//   console.log('Server started on port 5000');
-// });
+app.listen(5000, () => {
+  console.log('Server started on port 5000');
+});
