@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/send-email', (req, res) => {
+app.post('https://pen-tech-solution.netlify.app/send-email', (req, res) => {
   const { Customer_Name,
   Customer_Email,
   Customer_Organization,
